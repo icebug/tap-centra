@@ -1,0 +1,161 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "sku": {
+      "type": [
+        "string"
+      ]
+    },
+    "collection": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "product": {
+      "type": [
+        "string"
+      ]
+    },
+    "productId": {
+      "type": [
+        "integer"
+      ]
+    },
+    "variant": {
+      "type": [
+        "string"
+      ]
+    },
+    "size": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stockItemId": {
+      "type": [
+        "integer"
+      ]
+    },
+    "ean": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "weight": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "weightUnit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "countryOfOrigin": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "categories": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "prices": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "price": {
+            "type": [
+              "integer"
+            ]
+          },
+          "pricelist": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "currency": {
+            "type": [
+              "string"
+            ]
+          },
+          "campaigns": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": [
+                    "string"
+                  ]
+                },
+                "campaign": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "price": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "taxPercent": {
+      "type": [
+        "number"
+      ]
+    },
+    "store": {
+      "type": [
+        "string"
+      ]
+    }
+  }
+}

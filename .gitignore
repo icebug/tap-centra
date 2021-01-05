@@ -1,0 +1,7 @@
+.python-version
+singer-check-tap-data
+*.pyc
+*.egg-info
+dist/
+
+config.json

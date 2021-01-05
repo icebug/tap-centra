@@ -1,0 +1,572 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "orderId": {
+      "type": [
+        "string"
+      ]
+    },
+    "orderStatus": {
+      "type": [
+        "string"
+      ]
+    },
+    "orderDate": {
+      "type": [
+        "string"
+      ]
+    },
+    "orderStore": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "orderCurrency": {
+      "type": [
+        "string"
+      ]
+    },
+    "customerId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shippingList": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "internalOrder": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "shippingValue": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "voucherValue": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "grandTotalValue": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "grandTotalTaxValue": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "taxAdded": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "taxDeducted": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "marketId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pricelistId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "paymentType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "paymentDescription": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shipments": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "shipmentId": {
+            "type": [
+              "string"
+            ]
+          },
+          "shippedDate": {
+            "type": [
+              "string"
+            ]
+          },
+          "carrier": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "service": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "trackingId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "trackingUrl": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "returnSlipTracking": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "additionalMessage": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      }
+    },
+    "totalItemsPriceTax": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "totalItemsPrice": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "totalItemsWithoutTax": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "deliveryName": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryCompany": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryAddress": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryCoaddress": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryCity": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryState": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryZipcode": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryCountry": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryEmail": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryTele": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "deliveryCell": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingName": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingCompany": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingAddress": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingCoaddress": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingCity": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingState": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingZipcode": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingCountry": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingEmail": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "billingTele": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "otherComment": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "products": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "lineId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sku": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "variantSku": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sizeSku": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ean": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "variant": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "brand": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "size": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "qty": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "originalPrice": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "price": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "weight": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "weightUnit": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "countryOfOrigin": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "harmCode": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "comment": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "taxPercent": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "priceDiscount": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "priceDiscountAsPercent": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "taxValue": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "totalPrice": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "anyDiscount": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "priceEachWithoutTax": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "priceEachReduction": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "warehouses": {
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "itemQty": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "totalItemsDiscount": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "discounts": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "anyDiscount": {
+          "type": [
+            "null",
+            "boolean"
+          ]
+        },
+        "discount": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "discountAsNumber": {
+          "type": [
+            "null",
+            "number"
+          ]
+        },
+        "vouchers": {
+          "type": [
+            "null",
+            "array"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "voucher": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "priceOff": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "priceOffAsNumber": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
