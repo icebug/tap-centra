@@ -12,6 +12,14 @@ class CustomersStream(BaseStream):
     def response_key(self):
         return "customers"
 
+    def get_params(self, start_date, offset):
+        params = {
+            "limit": self.ORDER_LIMIT,
+            "offset": offset,
+            "modified": start_date
+        }
+        return params
+
     @property
     def path(self):
         return "/customers"

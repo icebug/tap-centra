@@ -16,7 +16,7 @@ class CentraRunner(tap_framework.Runner):
 
 @singer.utils.handle_top_exception(LOGGER)
 def main():
-    args = singer.utils.parse_args(required_config_keys=["api_key", "base_url"])
+    args = singer.utils.parse_args(required_config_keys=["api_key", "base_url", "start_date"])
     client = CentraClient(args.config)
     runner = CentraRunner(args, client, AVAILABLE_STREAMS)
 

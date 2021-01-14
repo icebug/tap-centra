@@ -15,3 +15,6 @@ class ReturnsStream(BaseStream):
     @property
     def path(self):
         return "/returns"
+
+    def get_last_record_date(self, data):
+        return data[0].get('date')
