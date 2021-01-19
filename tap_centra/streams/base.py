@@ -75,6 +75,7 @@ class BaseStream(base):
 
         for record in response[self.response_key()]:
             record = self.transform_record(record)
+            record['reportDate'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             transformed.append(record)
 
         return transformed

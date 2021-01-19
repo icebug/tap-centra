@@ -567,6 +567,10 @@
           }
         }
       }
+    },
+    "reportDate": {
+      "type": "string",
+      "format": "date-time"
     }
   }
 }
