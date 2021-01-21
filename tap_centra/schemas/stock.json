@@ -85,6 +85,10 @@
       "type": [
         "integer"
       ]
+    },
+    "reportDate": {
+      "type": "string",
+      "format": "date-time"
     }
   }
 }

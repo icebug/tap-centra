@@ -54,6 +54,7 @@ class StockStream(BaseStream):
 
         for record in response['products']:
             record = self.transform_record(record)
+            record['reportDate'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             transformed.append(record)
 
         return transformed
