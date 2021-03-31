@@ -16,7 +16,7 @@ It:
 1. Install
 
 ```bash
-git clone git@github.com:fishtown-analytics/tap-centra.git
+git clone git@github.com:icebug/tap-centra.git
 cd tap-centra
 pip install -e .
 ```
