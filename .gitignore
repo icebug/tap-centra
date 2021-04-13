@@ -5,3 +5,4 @@ singer-check-tap-data
 dist/
 
 config.json
+catalog.json
