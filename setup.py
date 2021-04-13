@@ -7,13 +7,10 @@ setup(
     name="tap-centra",
     version="0.0.1",
     description="Singer.io tap for extracting data from the Centra API",
-    author="Fishtown Analytics",
-    url="http://fishtownanalytics.com",
+    author="Smartr",
     classifiers=["Programming Language :: Python :: 3 :: Only"],
     py_modules=["tap_centra"],
-    install_requires=[
-        "tap-framework==0.0.4",
-    ],
+    install_requires=["tap-framework==0.0.4", "bcrypt==3.2.0"],
     entry_points="""
           [console_scripts]
           tap-centra=tap_centra:main

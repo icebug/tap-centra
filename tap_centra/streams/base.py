@@ -19,11 +19,7 @@ class BaseStream(base):
     ORDER_LIMIT = 200
 
     def get_params(self, start_date, offset):
-        params = {
-            "limit": self.ORDER_LIMIT,
-            "offset": offset,
-            "newer_than": start_date
-        }
+        params = {"limit": self.ORDER_LIMIT, "offset": offset, "newer_than": start_date}
         return params
 
     def sync_paginated(self, path):
@@ -33,8 +29,8 @@ class BaseStream(base):
 
         date = get_last_record_value_for_table(self.state, table)
         if date is None:
-            date = parse(self.config.get('start_date'))
-        LOGGER.info('Syncing data from {}'.format(date.isoformat()))
+            date = parse(self.config.get("start_date"))
+        LOGGER.info("Syncing data from {}".format(date.isoformat()))
 
         while True:
             params = self.get_params(date, offset)
@@ -56,26 +52,25 @@ class BaseStream(base):
                 break
             else:
                 offset += len(data)
-                LOGGER.info('Offset: ' + str(offset))
+                LOGGER.info("Offset: " + str(offset))
 
-            self.state = incorporate(self.state, table, 'last_record', last_record_date)
+            self.state = incorporate(self.state, table, "last_record", last_record_date)
             save_state(self.state)
 
     def sync_data(self):
         table = self.TABLE
         LOGGER.info("Syncing data for {}".format(table))
 
-        path = table
-        self.sync_paginated(path)
+        self.sync_paginated(self.path)
 
         return self.state
 
     def get_stream_data(self, response):
         transformed = []
-        if response['status'] == 'ok':
+        if response["status"] == "ok":
             for record in response[self.response_key()]:
                 record = self.transform_record(record)
-                record['reportDate'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                record["reportDate"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 transformed.append(record)
 
         return transformed

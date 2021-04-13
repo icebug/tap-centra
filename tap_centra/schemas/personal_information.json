@@ -1,0 +1,30 @@
+{
+    "type": [
+        "null",
+        "object"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "orderDate": {
+            "type": [
+                "string"
+            ]
+        },
+        "deliveryEmail": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "emailHash": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "reportDate": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

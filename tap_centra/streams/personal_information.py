@@ -6,10 +6,10 @@ import bcrypt
 LOGGER = singer.get_logger()
 
 
-class OrdersStream(BaseStream):
+class PersonalInformationStream(BaseStream):
     API_METHOD = "GET"
-    TABLE = "orders"
-    KEY_PROPERTIES = ["orderId"]
+    TABLE = "personal_information"
+    KEY_PROPERTIES = ["deliveryEmail"]
     ORDER_LIMIT = 5000
 
     def response_key(self):
@@ -27,7 +27,6 @@ class OrdersStream(BaseStream):
                 record["emailHash"] = bcrypt.hashpw(
                     bytes(record["deliveryEmail"], "utf-8"), bcrypt.gensalt(14)
                 )
-                del record["deliveryEmail"]
                 transformed.append(record)
 
         return transformed
