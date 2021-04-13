@@ -184,25 +184,7 @@
         "number"
       ]
     },
-    "deliveryName": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "deliveryCompany": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "deliveryAddress": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "deliveryCoaddress": {
       "type": [
         "null",
         "string"
@@ -220,12 +202,6 @@
         "string"
       ]
     },
-    "deliveryZipcode": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "deliveryCountry": {
       "type": [
         "null",
@@ -233,84 +209,6 @@
       ]
     },
     "deliveryEmail": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "deliveryTele": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "deliveryCell": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingName": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingCompany": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingAddress": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingCoaddress": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingCity": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingState": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingZipcode": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingCountry": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingEmail": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "billingTele": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "otherComment": {
       "type": [
         "null",
         "string"
