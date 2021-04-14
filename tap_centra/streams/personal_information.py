@@ -1,7 +1,7 @@
 from tap_centra.streams.base import BaseStream
 from datetime import datetime
 import singer
-import bcrypt
+import hashlib
 
 LOGGER = singer.get_logger()
 
@@ -24,9 +24,9 @@ class PersonalInformationStream(BaseStream):
             for record in response[self.response_key()]:
                 record = self.transform_record(record)
                 record["reportDate"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                record["emailHash"] = bcrypt.hashpw(
-                    bytes(record["deliveryEmail"], "utf-8"), bcrypt.gensalt(14)
-                )
+                record["emailHash"] = hashlib.md5(
+                    record["deliveryEmail"].encode()
+                ).hexdigest()
                 transformed.append(record)
 
         return transformed
