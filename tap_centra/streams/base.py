@@ -48,14 +48,14 @@ class BaseStream(base):
             data = response.get(self.response_key(), [])
             last_record_date = self.get_last_record_date(data)
 
+            self.state = incorporate(self.state, table, "last_record", last_record_date)
+            save_state(self.state)
+
             if len(data) < order_limit:
                 break
             else:
                 offset += len(data)
                 LOGGER.info("Offset: " + str(offset))
-
-            self.state = incorporate(self.state, table, "last_record", last_record_date)
-            save_state(self.state)
 
     def sync_data(self):
         table = self.TABLE
