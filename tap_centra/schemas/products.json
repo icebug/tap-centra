@@ -10,12 +10,6 @@
         "string"
       ]
     },
-    "sizeSku": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
     "collection": {
       "type": [
         "string",
