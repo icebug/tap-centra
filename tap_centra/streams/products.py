@@ -16,7 +16,7 @@ class ProductsStream(BaseStream):
         return "products"
 
     def get_last_record_date(self, data):
-        return data[-1].get('createdAt')
+        return max([d.get('createdAt') for d in data])
 
     def get_params(self, start_date):
         params = {
@@ -55,6 +55,3 @@ class ProductsStream(BaseStream):
     @property
     def path(self):
         return "/products"
-
-    def get_last_record_date(self, data):
-        return data[-1].get('createdAt')
