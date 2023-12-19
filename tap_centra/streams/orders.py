@@ -1,7 +1,8 @@
 from tap_centra.streams.base import BaseStream
-from datetime import datetime
+from datetime import datetime, timedelta
 import singer
 import hashlib
+
 
 LOGGER = singer.get_logger()
 
@@ -14,6 +15,14 @@ class OrdersStream(BaseStream):
 
     def response_key(self):
         return "orders"
+
+    def get_params(self, start_date, offset):
+        # Select min of start_date and current_date minus seven days
+        # to ensure we get updates on recent orders
+        start_date = min(start_date, datetime.now() - timedelta(days=7))
+        formatted_start_date = start_date.strftime("%Y-%m-%d %H:%M:%S")
+        params = {"limit": self.ORDER_LIMIT, "offset": offset, "newer_than": formatted_start_date}
+        return params
 
     def get_last_record_date(self, data):
         return data[-1].get("orderDate")
