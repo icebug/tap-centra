@@ -45,7 +45,10 @@ class ProductsStream(BaseStream):
             counter.increment(len(transformed))
 
         data = response.get(self.response_key(), [])
-        last_record_date = self.get_last_record_date(data)
+        if len(data) == 0:
+            last_record_date = date
+        else:
+            last_record_date = self.get_last_record_date(data)
 
         self.state = incorporate(self.state, table, 'last_record', last_record_date)
         save_state(self.state)
