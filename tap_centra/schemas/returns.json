@@ -50,37 +50,37 @@
     },
     "returnCost": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
     "shippingCost": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
     "handlingCost": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
     "voucherValue": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
     "taxValue": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
     "taxDeduction": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
