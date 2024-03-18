@@ -97,7 +97,7 @@
     },
     "baseCurrencyRate": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
